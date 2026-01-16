@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Bank Rajasthan - Register & Search</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo"><i class="fas fa-heartbeat"></i> BB<span>RAJASTHAN</span></div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#search">Find Donor</a></li>
+            <li><a href="#register">Register Me</a></li>
+        </ul>
+    </nav>
+
+    <header id="home" class="hero">
+        <h1>Blood Bank Rajasthan</h1>
+        <p>Aapka ek raktdaan, kisi ki muskaan.</p>
+    </header>
+
+    <section id="search" class="section">
+        <div class="container">
+            <h2><i class="fas fa-search"></i> Search Donor</h2>
+            <div class="search-box">
+                <select id="searchDistrict">
+                    <option>Select District</option>
+                    <option>Ajmer</option><option>Alwar</option><option>Banswara</option><option>Baran</option>
+                    <option>Barmer</option><option>Bharatpur</option><option>Bhilwara</option><option>Bikaner</option>
+                    <option>Bundi</option><option>Chittorgarh</option><option>Churu</option><option>Dausa</option>
+                    <option>Dholpur</option><option>Dungarpur</option><option>Hanumangarh</option><option>Jaipur</option>
+                    <option>Jaisalmer</option><option>Jalore</option><option>Jhalawar</option><option>Jhunjhunu</option>
+                    <option>Jodhpur</option><option>Karauli</option><option>Kota</option><option>Nagaur</option>
+                    <option>Pali</option><option>Pratapgarh</option><option>Rajsamand</option><option>Sawai Madhopur</option>
+                    <option>Sikar</option><option>Sirohi</option><option>Sri Ganganagar</option><option>Tonk</option><option>Udaipur</option>
+                </select>
+                <select id="searchBlood">
+                    <option>Blood Group</option>
+                    <option>A+</option><option>A-</option><option>B+</option><option>B-</option>
+                    <option>O+</option><option>O-</option><option>AB+</option><option>AB-</option>
+                </select>
+                <button onclick="findDonor()">Search</button>
+            </div>
+            <div id="results"></div>
+        </div>
+    </section>
+
+    <section id="register" class="section bg-light">
+        <div class="container">
+            <h2><i class="fas fa-user-plus"></i> Donor Registration</h2>
+            <form id="regForm" onsubmit="registerDonor(event)">
+                <div class="form-grid">
+                    <input type="text" id="name" placeholder="Full Name" required>
+                    <input type="tel" id="phone" placeholder="Mobile Number" required>
+                    <select id="regBlood" required>
+                        <option value="">Select Blood Group</option>
+                        <option>A+</option><option>B+</option><option>O+</option><option>AB+</option>
+                    </select>
+                    <select id="regDistrict" required>
+                        <option value="">Select District</option>
+                        <option>Jaipur</option><option>Jodhpur</option><option>Kota</option> </select>
+                </div>
+                <button type="submit" class="btn-submit">Register Now</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Blood Bank Rajasthan | Be a Hero, Donate Blood</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
